@@ -8,7 +8,6 @@ file.close()
 data = "".join(data)
 data = p1.split(data)
 
-print(' check 1')
 for i, line in enumerate(data):
     data[i] = re.split(r'\n', line)
     for j, set in enumerate(data[i]):
@@ -22,18 +21,15 @@ for i in range(len(semi)):
     semi[i] = int(semi[i])
 
 
+data[-1].pop(-1)
 for i in range(len(data)):
-    print('check 1.5')
     for j in range(len(data[i])):
         for z in range(len(data[i][j])):
             data[i][j][z] = int(data[i][j][z])
 
-print(' check 2')
 
-for i, group in enumerate(data):
-    print(' check 2')
+for group in data:
     for set in group:
-        print('check 3')
         for i in range(len(semi)):
             if(set[1]<semi[i]<set[1]+set[2]):
                 semi[i]=set[0]+semi[i]-set[1]
