@@ -84,11 +84,9 @@ def highcard(hand1, hand2):
 
 def orderByCard(array):
     for i in range(len(array)-1):
-        flag = False
         for n in range(len(array)-1-i):
             if array[n][2] == array[n+1][2] and highcard(array[n][0], array[n+1][0]):
                 (array[n], array[n+1]) = (array[n+1], array[n])
-                flag = False
 
 quickSort(lista, 0, len(lista)-1)
 orderByCard(lista)
