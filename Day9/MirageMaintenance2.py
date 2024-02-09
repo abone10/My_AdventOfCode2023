@@ -32,7 +32,7 @@ result = 0
 for obj in reports:
     history = 0
     for obje in reversed(obj[:-1]):
-        history = history + obje[-1]
+        history = obje[0] - history
     result += history
 
 print(result)
